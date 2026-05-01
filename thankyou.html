@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful! | AutoAdmissions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Outfit:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .thank-you-wrapper {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .thank-you-box {
+            max-width: 600px;
+            padding: 4rem;
+            width: 100%;
+        }
+        .success-icon {
+            width: 100px;
+            height: 100px;
+            background: rgba(37, 211, 102, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            margin: 0 auto 2rem;
+            box-shadow: 0 0 30px rgba(37, 211, 102, 0.3);
+        }
+        .success-icon i { width: 50px; height: 50px; }
+        .next-steps-list {
+            text-align: left;
+            margin: 2rem 0;
+            background: rgba(0,0,0,0.5);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .next-steps-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-wrapper">
+        <div class="thank-you-box glass-panel glowing-border fade-in-up">
+            <div class="success-icon pulse"><i data-lucide="check-circle-2"></i></div>
+            <h1 class="section-title" style="margin-bottom: 1rem; font-size: 2.5rem;">Payment Successful!</h1>
+            <p class="lead-text mb-4">Welcome to AutoAdmissions. Your WhatsApp template and setup instructions are ready.</p>
+            
+            <div class="next-steps-list">
+                <h4 style="color:var(--primary); font-size:1.3rem; margin-bottom: 15px;">Next Steps:</h4>
+                <ul>
+                    <li><div class="icon-circle green" style="width:24px;height:24px;"><i data-lucide="folder"></i></div> Access your Google Drive folder</li>
+                    <li><div class="icon-circle green" style="width:24px;height:24px;"><i data-lucide="download"></i></div> Download the Chatbot Flows</li>
+                    <li><div class="icon-circle green" style="width:24px;height:24px;"><i data-lucide="play-circle"></i></div> Watch the 1-hour setup video</li>
+                </ul>
+            </div>
+            
+            <a href="https://drive.google.com/drive/folders/1Uxy9WDS3p1BXIZyp1tmIdOHWK420_7qx?usp=sharing" target="_blank" class="cta-button primary full-width pulse">Access Template (Google Drive)</a>
+            
+            <p style="margin-top:2rem; color:var(--text-muted); font-size:0.9rem;">Having issues? Contact us at support@example.com</p>
+        </div>
+    </div>
+    
+    <script>lucide.createIcons();</script>
+</body>
+</html>
