@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WhatsApp Admission Automation | Stop Bleeding Admissions</title>
     <meta name="description" content="Automate your school or coaching admission inquiries on WhatsApp. Instantly reply and stop losing ₹20,000 per missed lead.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
     <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -175,7 +177,7 @@
             <h2 class="section-title text-center scroll-anim">See It Live. Watch The Bot Close A Parent.</h2>
             <div class="video-container scroll-anim delay-1">
                 <!-- Demo Video -->
-                <video src="schl.mp4" controls autoplay muted loop playsinline class="glass-panel" style="width: 100%; max-height: 500px; object-fit: contain; background: #000; outline: none; display: block;"></video>
+                <video id="demoVideo" src="schl.mp4" controls muted loop playsinline preload="none" class="glass-panel" style="width: 100%; max-height: 500px; object-fit: contain; background: #000; outline: none; display: block;"></video>
             </div>
             <div class="demo-steps scroll-anim delay-2">
                 <div class="step glass-panel">
@@ -294,11 +296,11 @@
             <div class="testimonials-grid scroll-anim delay-1">
                 <div class="testimonial-card glass-panel">
                     <div class="card-glow"></div>
-                    <img src="testi1.jpeg" alt="WhatsApp Testimonial 1" class="testimonial-img">
+                    <img src="testi1.webp" alt="WhatsApp Testimonial 1" class="testimonial-img" width="1024" height="1536" loading="lazy">
                 </div>
                 <div class="testimonial-card glass-panel">
                     <div class="card-glow"></div>
-                    <img src="testimoni.jpeg" alt="WhatsApp Testimonial 2" class="testimonial-img">
+                    <img src="testimoni.webp" alt="WhatsApp Testimonial 2" class="testimonial-img" width="1024" height="1536" loading="lazy">
                 </div>
             </div>
             <p class="text-center mt-4 lead-text scroll-anim delay-2">Recover your ₹999 investment with just <strong>1 admission.</strong></p>
@@ -450,9 +452,9 @@
     </div>
 
     <!-- Razorpay Checkout JS -->
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <script>
         lucide.createIcons();
     </script>

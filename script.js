@@ -170,4 +170,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- LAZY LOAD & PLAY VIDEO ON VIEWPORT INTERSECTION ---
+    const video = document.getElementById('demoVideo');
+    if (video && 'IntersectionObserver' in window) {
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Only fetch the video file when the user scrolls near it
+                    if (video.getAttribute('preload') === 'none') {
+                        video.setAttribute('preload', 'auto');
+                    }
+                    video.play().catch(err => {
+                        console.log("Video autoplay blocked or pending user interaction:", err);
+                    });
+                } else {
+                    // Pause the video when out of viewport to save CPU/battery
+                    video.pause();
+                }
+            });
+        }, { threshold: 0.15 });
+        videoObserver.observe(video);
+    }
+
 });
