@@ -78,6 +78,16 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
             modal.classList.add('active');
+
+            // CAPI: Track InitiateCheckout when modal opens
+            fetch('/api/capi', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    event_name: 'InitiateCheckout',
+                    event_url: window.location.href
+                })
+            }).catch(err => console.error("CAPI error:", err));
         });
     });
 
@@ -117,9 +127,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 }).catch(err => console.error("Error saving lead:", err));
             }
 
+            // Send CAPI Event for Lead Generation when user submits details
+            fetch('/api/capi', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    event_name: 'Lead',
+                    event_url: window.location.href,
+                    user_data: { name: name, email: email, phone: phone }
+                })
+            }).catch(err => console.error("CAPI error:", err));
+
             // 2. Razorpay Options
             var options = {
-                "key": "rzp_live_SkACKMd0bj0i56", // Enter the Key ID generated from the Dashboard
+                "key": "rzp_live_SqKJKhltZYuB9N", // Enter the Key ID generated from the Dashboard
                 "amount": "99900", // Amount is in currency subunits (paise). ₹999 = 99900.
                 "currency": "INR",
                 "name": "AutoAdmissions",
