@@ -15,7 +15,7 @@
     --red-alert: #ef4444;
     --red-bg: rgba(239, 68, 68, 0.1);
     
-    --font-heading: 'Outfit', sans-serif;
+    --font-heading: 'Inter', sans-serif;
     --font-body: 'Inter', sans-serif;
     
     --glass-border: 1px solid rgba(255, 255, 255, 0.08);
@@ -112,7 +112,13 @@ ul {
     top: -50%; left: -50%; width: 200%; height: 200%;
     background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
     transform: rotate(45deg);
-    animation: shine 3s infinite;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+.cta-button:hover::after {
+    opacity: 1;
+    animation: shine 1.5s 1;
 }
 
 @keyframes shine {
@@ -177,7 +183,7 @@ ul {
 .delay-3 { animation-delay: 0.45s; }
 .delay-4 { animation-delay: 0.6s; }
 
-.pulse { animation: pulse 2.5s infinite; }
+.pulse { box-shadow: 0 10px 30px var(--primary-glow); }
 
 .scroll-anim {
     opacity: 0;
@@ -232,7 +238,6 @@ section { padding: 110px 0; }
     top: 10%; right: 5%;
     width: 600px; height: 600px;
     background: radial-gradient(circle, rgba(37,211,102,0.15) 0%, rgba(10,14,23,0) 70%);
-    filter: blur(40px);
     z-index: -1;
 }
 
