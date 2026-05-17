@@ -161,12 +161,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             };
 
-            var rzp1 = new Razorpay(options);
-            rzp1.on('payment.failed', function (response){
-                alert("Payment Failed. Reason: " + response.error.description);
+            loadRazorpay(() => {
+                var rzp1 = new Razorpay(options);
+                rzp1.on('payment.failed', function (response){
+                    alert("Payment Failed. Reason: " + response.error.description);
+                });
+                rzp1.open();
             });
-            
-            rzp1.open();
         });
     }
 
@@ -215,3 +216,17 @@ window.addEventListener('load', () => {
     fbq('init', '949207904646111');
     fbq('track', 'PageView');
 });
+
+// --- DYNAMIC LAZY LOADER FOR RAZORPAY ---
+function loadRazorpay(callback) {
+    if (window.Razorpay) {
+        callback();
+        return;
+    }
+    const script = document.createElement('script');
+    script.src = "https://checkout.razorpay.com/v1/checkout.js";
+    script.async = true;
+    script.onload = callback;
+    script.onerror = () => alert("Secure payment gateway failed to load. Please check your network connection.");
+    document.body.appendChild(script);
+}
