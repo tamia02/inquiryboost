@@ -115,15 +115,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const name = document.getElementById('fullName').value;
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
+            const designation = document.getElementById('designation').value;
 
             // 1. Send Lead Data to Google Sheets
-            const googleWebAppUrl = "https://script.google.com/macros/s/AKfycbwMjA6XOIukO5L2OBy9TIAwh5cwqblv8iaC2yUBLskO8tz8kvr5o2Rb0RJ9NyyZ3xgEbg/exec";
+            const googleWebAppUrl = "https://script.google.com/macros/s/AKfycbxfhT2nTNWlHZogT0-WuVglYO1STBTWYotLf92xBir-tiD4RBk0G8q40CbXVxJ3c1h37A/exec";
             if (googleWebAppUrl !== "YOUR_GOOGLE_SCRIPT_URL_HERE") {
                 fetch(googleWebAppUrl, {
                     method: 'POST',
                     mode: 'no-cors', // Prevents CORS issues
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ name: name, email: email, phone: phone })
+                    body: JSON.stringify({ name: name, email: email, phone: phone, designation: designation })
                 }).catch(err => console.error("Error saving lead:", err));
             }
 
@@ -134,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 body: JSON.stringify({
                     event_name: 'Lead',
                     event_url: window.location.href,
-                    user_data: { name: name, email: email, phone: phone }
+                    user_data: { name: name, email: email, phone: phone, designation: designation }
                 })
             }).catch(err => console.error("CAPI error:", err));
 
@@ -193,6 +194,10 @@ document.addEventListener('DOMContentLoaded', () => {
         videoObserver.observe(video);
     }
 
+    // Initialize/refresh Lucide icons
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
 });
 
 // --- LAZY LOAD ANALYTICS & PIXELS ON WINDOW LOAD ---
