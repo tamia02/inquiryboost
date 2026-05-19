@@ -45,6 +45,7 @@ src="https://www.facebook.com/tr?id=949207904646111&ev=Purchase&noscript=1"/>
             max-width: 600px;
             padding: 4rem;
             width: 100%;
+            box-sizing: border-box;
         }
         .success-icon {
             width: 100px;
@@ -73,6 +74,27 @@ src="https://www.facebook.com/tr?id=949207904646111&ev=Purchase&noscript=1"/>
             align-items: center;
             gap: 15px;
             font-size: 1.1rem;
+        }
+        @media (max-width: 768px) {
+            .thank-you-box {
+                padding: 2rem 1.25rem;
+            }
+            .success-icon {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 1.5rem;
+            }
+            .success-icon i { width: 40px; height: 40px; }
+            .thank-you-box h1 { font-size: 1.8rem !important; }
+            .next-steps-list { margin: 1.5rem 0; padding: 15px; }
+            .next-steps-list li { font-size: 0.95rem; }
+            .cta-button {
+                height: 54px !important;
+                border-radius: 14px !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
         }
     </style>
 </head>
