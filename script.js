@@ -194,6 +194,21 @@ document.addEventListener('DOMContentLoaded', () => {
         videoObserver.observe(video);
     }
 
+    // --- STICKY MOBILE CTA SCROLL TRIGGER ---
+    const stickyCta = document.getElementById('stickyMobileCta');
+    const heroSection = document.querySelector('.hero');
+
+    if (stickyCta && heroSection) {
+        window.addEventListener('scroll', () => {
+            const heroHeight = heroSection.offsetHeight;
+            if (window.scrollY > heroHeight) {
+                stickyCta.classList.add('visible');
+            } else {
+                stickyCta.classList.remove('visible');
+            }
+        });
+    }
+
     // Initialize/refresh Lucide icons
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
