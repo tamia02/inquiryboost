@@ -2290,6 +2290,81 @@ section { padding: 110px 0; }
     .bot-table {
         min-width: 500px !important;
     }
+
+    /* CRITICAL MOBILE RESETS: Stop layout scaling and horizontal overflow */
+    html, body {
+        max-width: 100% !important;
+        width: 100% !important;
+        overflow-x: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    section, header, footer, .container, .hero-split, .cta-wrapper {
+        overflow: hidden !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    /* Force all layout boxes to be fluid on mobile */
+    .video-container,
+    .demo-steps,
+    .glowing-border,
+    .stats-grid,
+    .testimonials-grid,
+    .cost-content,
+    .faq-accordion,
+    .modal-content,
+    .what-is-this-card,
+    .pain-hook,
+    .how-it-works-visual,
+    .table-container,
+    .bot-caption,
+    .audience-grid,
+    .chat-proof-grid,
+    .delivery-grid,
+    .comparison-table-wrapper,
+    .compatibility-grid,
+    .pricing-explanation-card,
+    .voice-testimonials {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Hide background/absolute decorative elements that bleed out */
+    .hero-bg-glow,
+    .offer-section::before,
+    .card-glow {
+        display: none !important;
+    }
+
+    /* Ensure text wrapping on headings to avoid push-out */
+    h1, .hero h1, h2, .section-title, h3, .section-title-sm {
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        white-space: normal !important;
+        max-width: 100% !important;
+    }
+
+    /* Sticky Navigation alignment on mobile */
+    .sticky-nav {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+    }
+    .nav-container {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 0 16px !important;
+        box-sizing: border-box !important;
+    }
 }
 
 
