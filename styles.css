@@ -1400,6 +1400,249 @@ section { padding: 110px 0; }
     to { transform: translateY(0); }
 }
 
+
+/* WHAT EXACTLY IS THIS? SECTION */
+.what-is-this {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, #0e1322 0%, #070a13 100%);
+}
+.what-is-this-card {
+    padding: 4rem 3.5rem;
+    position: relative;
+    overflow: hidden;
+    background: rgba(10, 14, 23, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+}
+.what-is-this-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    margin-top: 2.5rem;
+    align-items: start;
+}
+.what-is-this-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.lead-intro {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #fff;
+    font-weight: 500;
+}
+.warning-alert {
+    padding: 1.2rem;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px dashed rgba(239, 68, 68, 0.3);
+    border-radius: 12px;
+    color: #fca5a5;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+.what-is-this-content h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+.what-is-this-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.what-is-this-list li {
+    display: flex;
+    align-items: start;
+    gap: 15px;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: #cbd5e1;
+}
+.list-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(37, 211, 102, 0.1);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid rgba(37, 211, 102, 0.2);
+}
+.list-icon i {
+    width: 16px;
+    height: 16px;
+}
+.what-is-this-footer {
+    margin-top: 3.5rem;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.footnote-highlight {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+/* HOW IT WORKS SECTION (3 Steps) */
+.how-it-works-section {
+    padding: 6rem 0;
+    background: #070a13;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+.how-it-works-visual {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 4rem;
+}
+.how-step {
+    width: 30%;
+    padding: 3.5rem 2rem 2.5rem;
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(10, 14, 23, 0.6);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.how-step:hover {
+    transform: translateY(-5px);
+    border-color: rgba(37, 211, 102, 0.3);
+}
+.step-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: #000;
+    font-weight: 900;
+    font-size: 0.8rem;
+    padding: 4px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.step-icon-wrap {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(37, 211, 102, 0.1);
+    border: 1px solid rgba(37, 211, 102, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+.step-icon-wrap i {
+    width: 24px;
+    height: 24px;
+}
+.how-step h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+.how-step p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    text-align: center;
+}
+.how-step-connector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.15);
+    width: 50px;
+    flex-shrink: 0;
+}
+.how-step-connector i {
+    width: 32px;
+    height: 32px;
+}
+
+/* WHAT THE AGENT ACTUALLY DOES SECTION */
+.bot-actions-section {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, #070a13 0%, #0e1322 100%);
+}
+.table-container {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.bot-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+.bot-table th, .bot-table td {
+    padding: 1.5rem 2rem;
+}
+.bot-table th {
+    background: rgba(255, 255, 255, 0.03);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.bot-table td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    font-size: 1rem;
+    background: rgba(10, 14, 23, 0.4);
+}
+.bot-table tr:last-child td {
+    border-bottom: none;
+}
+.parent-ask {
+    font-weight: 700;
+    color: #fff;
+    width: 40%;
+}
+.parent-ask.highlight-parent {
+    color: #fca5a5;
+}
+.bot-action {
+    color: #cbd5e1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.bot-action i {
+    color: var(--primary);
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+}
+.bot-action i[data-lucide="bell"] {
+    color: #53bdeb;
+}
+.bot-caption {
+    max-width: 800px;
+    margin: 2.5rem auto 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 /* RESPONSIVE SUB-OVERRIDES */
 @media (max-width: 1024px) {
     .delivery-card.full-width-card {
@@ -1414,6 +1657,41 @@ section { padding: 110px 0; }
 }
 
 @media (max-width: 768px) {
+    .what-is-this-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .what-is-this-card {
+        padding: 2.5rem 1.5rem !important;
+    }
+    
+    .how-it-works-visual {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .how-step {
+        width: 100%;
+        padding: 3rem 1.5rem 2rem;
+    }
+    
+    .how-step-connector {
+        transform: rotate(90deg);
+        margin: 0 auto;
+        height: 30px;
+        width: auto;
+    }
+    
+    .bot-table th, .bot-table td {
+        padding: 1.2rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .parent-ask {
+        width: 35%;
+    }
+
     .chat-proof-grid, .delivery-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
