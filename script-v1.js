@@ -172,26 +172,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- LAZY LOAD & PLAY VIDEO ON VIEWPORT INTERSECTION ---
+    // --- CLICK TO PLAY DEMO VIDEO ---
     const video = document.getElementById('demoVideo');
-    if (video && 'IntersectionObserver' in window) {
-        const videoObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Only fetch the video file when the user scrolls near it
-                    if (video.getAttribute('preload') === 'none') {
-                        video.setAttribute('preload', 'auto');
-                    }
-                    video.play().catch(err => {
-                        console.log("Video autoplay blocked or pending user interaction:", err);
-                    });
-                } else {
-                    // Pause the video when out of viewport to save CPU/battery
-                    video.pause();
-                }
-            });
-        }, { threshold: 0.15 });
-        videoObserver.observe(video);
+    const videoWrapper = document.getElementById('videoWrapper');
+    const videoThumbnail = document.getElementById('videoThumbnail');
+
+    if (videoWrapper && videoThumbnail && video) {
+        videoWrapper.addEventListener('click', () => {
+            if (video.style.display === 'none') {
+                videoThumbnail.style.display = 'none';
+                video.style.display = 'block';
+                video.setAttribute('preload', 'auto');
+                video.play().catch(err => {
+                    console.log("Video playback blocked or failed:", err);
+                });
+            }
+        });
     }
 
     // --- STICKY MOBILE CTA SCROLL TRIGGER ---
