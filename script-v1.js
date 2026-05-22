@@ -144,8 +144,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 "key": "rzp_live_SqKJKhltZYuB9N", // Enter the Key ID generated from the Dashboard
                 "amount": "9900", // Amount is in currency subunits (paise). ₹99 = 9900.
                 "currency": "INR",
-                "name": "AutoAdmissions",
-                "description": "WhatsApp Admission Template",
+                "name": "WFA system",
+                "description": "WFA Admission System",
                 "handler": function (response){
                     // Payment successful
                     console.log("Payment ID: ", response.razorpay_payment_id);
