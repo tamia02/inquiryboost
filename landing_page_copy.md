@@ -3,7 +3,7 @@
 ## 1. HERO SECTION
 **Headline:** Every Single Missed WhatsApp Message = ₹20,000 Lost. Stop Bleeding Admissions Today.
 **Subheadline:** You are losing parents to competitors because of slow replies. Fix it in 1 hour. Automate your WhatsApp.
-**CTA Button:** Get WhatsApp Automation Template (Just ₹999)
+**CTA Button:** Get WhatsApp Automation Template (Just ₹99)
 **Micro Trust Line:** Used by 500+ Indian Schools & Coaching Institutes to stop revenue leaks.
 
 ---
@@ -61,7 +61,7 @@ Your WhatsApp becomes an unstoppable 24/7 admission machine.
 ---
 
 ## 5. BEFORE vs AFTER
-**Title:** Your WhatsApp Before vs After This ₹999 Template
+**Title:** Your WhatsApp Before vs After This ₹99 Template
 
 ### Before (The Nightmare)
 1. "Fee kya hai?" ignored for 6 hours.
@@ -84,7 +84,7 @@ Your WhatsApp becomes an unstoppable 24/7 admission machine.
 ---
 
 ## 6. OFFER STACK
-**Title:** Everything You Get For Just ₹999
+**Title:** Everything You Get For Just ₹99
 
 * **Copy-Paste WhatsApp Chatbot Flow** (Plug and play)
 * **5 High-Converting Follow-up Messages** (To close hesitant parents)
@@ -93,7 +93,7 @@ Your WhatsApp becomes an unstoppable 24/7 admission machine.
 * **Lifetime Access** (No monthly fees)
 
 **Total Value:** ₹10,000+
-👉 **Your Price Today:** ₹999 Only.
+👉 **Your Price Today:** ₹99 Only.
 
 ---
 
@@ -133,11 +133,11 @@ You can leave this page right now.
 Keep doing things manually.
 Keep losing ₹20,000 every time you reply late.
 
-Or, you can invest ₹999 today.
+Or, you can invest ₹99 today.
 And fix this massive revenue leak forever.
 Your choice.
 
-**CTA Button:** Yes, I Want To Stop Losing Admissions (Just ₹999)
+**CTA Button:** Yes, I Want To Stop Losing Admissions (Just ₹99)
 
 ---
 
@@ -157,7 +157,7 @@ A: 1 to 2 hours maximum. Then it runs on autopilot forever.
 A: Yes! It works whether you have 10 students or 10,000 students.
 
 **Q: Are there any hidden monthly charges?**
-A: No. You pay ₹999 once for our template and training.
+A: No. You pay ₹99 once for our template and training.
 
 ---
 
@@ -170,4 +170,4 @@ If you don't reply, your competitor will.
 
 Lock your admissions right now.
 
-**CTA Button:** Buy Now - ₹999
+**CTA Button:** Buy Now - ₹99

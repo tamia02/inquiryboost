@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // 2. Razorpay Options
             var options = {
                 "key": "rzp_live_SqKJKhltZYuB9N", // Enter the Key ID generated from the Dashboard
-                "amount": "99900", // Amount is in currency subunits (paise). ₹999 = 99900.
+                "amount": "9900", // Amount is in currency subunits (paise). ₹99 = 9900.
                 "currency": "INR",
                 "name": "AutoAdmissions",
                 "description": "WhatsApp Admission Template",
