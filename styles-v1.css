@@ -2367,4 +2367,13 @@ section { padding: 110px 0; }
     }
 }
 
+.cta-sub-price {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-top: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: block;
+}
+
 
