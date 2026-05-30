@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // 2. Razorpay Options
             var options = {
                 "key": "rzp_live_SqKJKhltZYuB9N", // Enter the Key ID generated from the Dashboard
-                "amount": "9900", // Amount is in currency subunits (paise). ₹99 = 9900.
+                "amount": "19900", // Amount is in currency subunits (paise). ₹199 = 19900.
                 "currency": "INR",
                 "name": "WFA AI System",
                 "description": "WFA AI System",
