@@ -1643,3 +1643,117 @@ section { padding: 80px 0; }
     }
     .nav-logo { font-size: 1.1rem; }
 }
+
+/* ==========================================
+   SHARP EDGES & MINIMALIST LAYOUT OVERRIDES 
+   ========================================== */
+.cta-button,
+.secondary-btn,
+.nav-cta,
+.glass-panel,
+.highlight-bg,
+.hero .badge,
+.reply-time-badge,
+.css-phone,
+.wa-avatar,
+.wa-msg,
+.wa-attachment,
+.wa-pdf-card,
+.wa-date,
+.comparison-table-wrapper,
+.compatibility-card,
+.how-step,
+.step-badge,
+.step-icon-wrap,
+.label-badge,
+.glass-pill,
+.video-wrapper,
+.step,
+.step-icon,
+.card,
+.pricing-explanation-card,
+.ribbon,
+.stat-card,
+.stat-icon,
+.testimonial-card,
+.testimonial-img,
+.voice-card,
+.voice-avatar,
+.wa-voice-message,
+.voice-play-btn,
+.works-best-for,
+.for-who,
+.not-for-who,
+.delivery-card,
+.delivery-badge-icon,
+.cost-content,
+.faq-item,
+.modal-content,
+.form-group input,
+.sticky-mobile-cta .cta-button,
+.success-icon,
+.next-steps-list,
+.icon-circle {
+    border-radius: 0 !important;
+}
+
+/* Remove all shadows and enforce clean black borders for sharp minimal editorial look */
+.glass-panel,
+.how-step,
+.card,
+.pricing-explanation-card,
+.stat-card,
+.testimonial-card,
+.voice-card,
+.works-best-for,
+.for-who,
+.not-for-who,
+.delivery-card,
+.cost-content,
+.faq-item,
+.modal-content,
+.compatibility-card,
+.wa-msg,
+.wa-pdf-card,
+.wa-attachment,
+.wa-voice-message,
+.next-steps-list {
+    box-shadow: none !important;
+    border: 1px solid #000000 !important;
+}
+
+/* Enforce solid borders on buttons */
+.cta-button.primary {
+    border: 2px solid #000000 !important;
+}
+.cta-button.primary:hover {
+    background: #000000 !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+.cta-button.whatsapp {
+    border: 2px solid #000000 !important;
+}
+.cta-button.whatsapp:hover {
+    background: #000000 !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+.compatibility-card:hover,
+.how-step:hover,
+.delivery-card:hover,
+.stat-card:hover,
+.testimonial-card:hover,
+.faq-item:hover {
+    transform: none !important;
+    border-color: #000000 !important;
+    box-shadow: none !important;
+}
+
+/* Simplify body background */
+body {
+    background-image: none !important; /* clean solid white background */
+}
+
