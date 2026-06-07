@@ -1653,51 +1653,76 @@ section { padding: 80px 0; }
 .glass-panel,
 .highlight-bg,
 .hero .badge,
-.reply-time-badge,
-.css-phone,
-.wa-avatar,
-.wa-msg,
-.wa-attachment,
-.wa-pdf-card,
-.wa-date,
 .comparison-table-wrapper,
 .compatibility-card,
 .how-step,
 .step-badge,
-.step-icon-wrap,
 .label-badge,
 .glass-pill,
-.video-wrapper,
 .step,
-.step-icon,
 .card,
 .pricing-explanation-card,
 .ribbon,
 .stat-card,
-.stat-icon,
 .testimonial-card,
 .testimonial-img,
 .voice-card,
-.voice-avatar,
-.wa-voice-message,
-.voice-play-btn,
 .works-best-for,
 .for-who,
 .not-for-who,
 .delivery-card,
-.delivery-badge-icon,
 .cost-content,
 .faq-item,
 .modal-content,
 .form-group input,
 .sticky-mobile-cta .cta-button,
-.success-icon,
-.next-steps-list,
-.icon-circle {
+.next-steps-list {
     border-radius: 0 !important;
 }
 
-/* Remove all shadows and enforce clean black borders for sharp minimal editorial look */
+/* AUTHENTIC CURVED MOBILE MOCKUP INTERFACE */
+.css-phone {
+    border-radius: 40px !important;
+}
+.reply-time-badge {
+    border-radius: 12px !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
+}
+.wa-avatar,
+.wa-chat-avatar,
+.voice-avatar,
+.play-btn-circle,
+.voice-play-btn,
+.icon-circle,
+.success-icon {
+    border-radius: 50% !important;
+}
+.wa-msg,
+.wa-chat-msg {
+    border-radius: 12px !important;
+    border: none !important; /* Authentic borderless bubbles inside chat */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1) !important;
+}
+.wa-msg.sent,
+.wa-chat-msg.sent {
+    border-top-right-radius: 0 !important;
+}
+.wa-msg.received,
+.wa-chat-msg.received {
+    border-top-left-radius: 0 !important;
+}
+.wa-attachment,
+.wa-pdf-card,
+.wa-voice-message,
+.wa-date,
+.step-icon-wrap,
+.step-icon,
+.delivery-badge-icon,
+.stat-icon {
+    border-radius: 8px !important;
+}
+
+/* Remove page shadows and enforce clean black borders for sharp minimal editorial look */
 .glass-panel,
 .how-step,
 .card,
@@ -1713,33 +1738,35 @@ section { padding: 80px 0; }
 .faq-item,
 .modal-content,
 .compatibility-card,
-.wa-msg,
-.wa-pdf-card,
-.wa-attachment,
-.wa-voice-message,
 .next-steps-list {
     box-shadow: none !important;
     border: 1px solid #000000 !important;
 }
 
-/* Enforce solid borders on buttons */
+/* CRO Button optimization - Solid borders and responsive hover states */
 .cta-button.primary {
-    border: 2px solid #000000 !important;
+    border: 2px solid #20b958 !important;
+    background: linear-gradient(135deg, #25D366, #1ea34d) !important;
 }
 .cta-button.primary:hover {
-    background: #000000 !important;
+    background: #128C7E !important; /* Solid dark WhatsApp green */
+    border-color: #128C7E !important;
     color: #ffffff !important;
-    box-shadow: none !important;
-    transform: none !important;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25) !important;
+    transform: translateY(-2px) !important;
+    transition: all 0.2s ease !important;
 }
 .cta-button.whatsapp {
-    border: 2px solid #000000 !important;
+    border: 2px solid #0f172a !important;
+    background: #0f172a !important;
 }
 .cta-button.whatsapp:hover {
-    background: #000000 !important;
+    background: #1e293b !important;
+    border-color: #1e293b !important;
     color: #ffffff !important;
-    box-shadow: none !important;
-    transform: none !important;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.15) !important;
+    transform: translateY(-2px) !important;
+    transition: all 0.2s ease !important;
 }
 .compatibility-card:hover,
 .how-step:hover,
@@ -1752,8 +1779,9 @@ section { padding: 80px 0; }
     box-shadow: none !important;
 }
 
-/* Simplify body background */
+/* Simplify body background and animations */
 body {
     background-image: none !important; /* clean solid white background */
 }
+
 
