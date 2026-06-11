@@ -10,6 +10,11 @@ Follow these simple steps to make your website automatically save leads (Name, E
    * **Column C:** Email
    * **Column D:** Phone
    * **Column E:** Designation
+   * **Column F:** UTM Source
+   * **Column G:** UTM Medium
+   * **Column H:** UTM Campaign
+   * **Column I:** UTM Content
+   * **Column J:** UTM Term
 
 ### Step 2: Add the Script
 1. In your Google Sheet, click on **Extensions** > **Apps Script** in the top menu.
@@ -23,8 +28,19 @@ function doPost(e) {
     var data = JSON.parse(e.postData.contents);
     var timestamp = new Date();
     
-    // Append data to the next available row (Timestamp, Name, Email, Phone, Designation)
-    sheet.appendRow([timestamp, data.name, data.email, data.phone, data.designation]);
+    // Append data to the next available row (Timestamp, Name, Email, Phone, Designation, UTM Source, UTM Medium, UTM Campaign, UTM Content, UTM Term)
+    sheet.appendRow([
+      timestamp, 
+      data.name, 
+      data.email, 
+      data.phone, 
+      data.designation,
+      data.utm_source || "",
+      data.utm_medium || "",
+      data.utm_campaign || "",
+      data.utm_content || "",
+      data.utm_term || ""
+    ]);
     
     return ContentService.createTextOutput(JSON.stringify({"result": "success"}))
       .setMimeType(ContentService.MimeType.JSON);

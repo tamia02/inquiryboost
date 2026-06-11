@@ -6,7 +6,7 @@ module.exports = async function handler(req, res) {
         return res.status(405).json({ error: 'Method Not Allowed' });
     }
 
-    const { event_name, event_url, user_data } = req.body;
+    const { event_name, event_url, user_data, custom_data } = req.body;
     
     // Meta CAPI Credentials
     const PIXEL_ID = '949207904646111';
@@ -40,6 +40,7 @@ module.exports = async function handler(req, res) {
                 event_source_url: event_url || req.headers.referer || 'https://www.yourwebsite.com',
                 action_source: 'website',
                 user_data: formattedUserData,
+                custom_data: custom_data || undefined
             }
         ]
     };

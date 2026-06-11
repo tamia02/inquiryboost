@@ -1784,4 +1784,117 @@ body {
     background-image: none !important; /* clean solid white background */
 }
 
+/* ==========================================
+   NAVIGATION BRAND LOGO & CLIENT MARQUEE
+   ========================================== */
+.nav-brand-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50% !important;
+    object-fit: cover;
+    border: 1px solid #000000;
+}
+
+.client-marquee-section {
+    padding: 50px 0 30px;
+    background: #ffffff;
+    border-bottom: 1px solid #000000;
+    overflow: hidden;
+}
+
+.marquee-title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.marquee-title-wrapper h3 {
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+}
+
+.marquee-title-wrapper .marquee-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #25D366;
+    border-radius: 50% !important;
+    display: inline-block;
+    box-shadow: 0 0 8px #25D366;
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0;
+}
+
+/* Linear gradients at the edges for a premium fade out/in look */
+.marquee-container::before,
+.marquee-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.marquee-container::before {
+    left: 0;
+    background: linear-gradient(to right, #ffffff, transparent);
+}
+
+.marquee-container::after {
+    right: 0;
+    background: linear-gradient(to left, #ffffff, transparent);
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    gap: 24px;
+    animation: scrollMarquee 40s linear infinite !important;
+}
+
+.marquee-track:hover {
+    animation-play-state: paused !important;
+}
+
+.marquee-card {
+    width: 260px;
+    height: 360px;
+    flex-shrink: 0;
+    border: 1px solid #000000 !important;
+    border-radius: 0 !important;
+    overflow: hidden;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none !important;
+}
+
+.marquee-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@keyframes scrollMarquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% / 3));
+    }
+}
+
 

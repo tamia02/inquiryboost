@@ -117,6 +117,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const phone = document.getElementById('phone').value;
             const designation = document.getElementById('designation').value;
 
+            // Extract UTM values from the hidden fields
+            const utm_source = document.getElementById('utm_source').value;
+            const utm_medium = document.getElementById('utm_medium').value;
+            const utm_campaign = document.getElementById('utm_campaign').value;
+            const utm_content = document.getElementById('utm_content').value;
+            const utm_term = document.getElementById('utm_term').value;
+
             // 1. Send Lead Data to Google Sheets
             const googleWebAppUrl = "https://script.google.com/macros/s/AKfycbxfhT2nTNWlHZogT0-WuVglYO1STBTWYotLf92xBir-tiD4RBk0G8q40CbXVxJ3c1h37A/exec";
             if (googleWebAppUrl !== "YOUR_GOOGLE_SCRIPT_URL_HERE") {
@@ -124,7 +131,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     method: 'POST',
                     mode: 'no-cors', // Prevents CORS issues
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ name: name, email: email, phone: phone, designation: designation })
+                    body: JSON.stringify({
+                        name: name,
+                        email: email,
+                        phone: phone,
+                        designation: designation,
+                        utm_source: utm_source,
+                        utm_medium: utm_medium,
+                        utm_campaign: utm_campaign,
+                        utm_content: utm_content,
+                        utm_term: utm_term
+                    })
                 }).catch(err => console.error("Error saving lead:", err));
             }
 
@@ -135,7 +152,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 body: JSON.stringify({
                     event_name: 'Lead',
                     event_url: window.location.href,
-                    user_data: { name: name, email: email, phone: phone, designation: designation }
+                    user_data: { name: name, email: email, phone: phone, designation: designation },
+                    custom_data: {
+                        utm_source: utm_source,
+                        utm_medium: utm_medium,
+                        utm_campaign: utm_campaign,
+                        utm_content: utm_content,
+                        utm_term: utm_term
+                    }
                 })
             }).catch(err => console.error("CAPI error:", err));
 

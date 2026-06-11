@@ -111,8 +111,19 @@ function doPost(e) {
   try {
     var data = JSON.parse(e.postData.contents);
     var timestamp = new Date();
-    // Appends: Timestamp | Name | Email | Phone | Designation
-    sheet.appendRow([timestamp, data.name, data.email, data.phone, data.designation]);
+    // Appends: Timestamp | Name | Email | Phone | Designation | UTM Source | UTM Medium | UTM Campaign | UTM Content | UTM Term
+    sheet.appendRow([
+      timestamp, 
+      data.name, 
+      data.email, 
+      data.phone, 
+      data.designation,
+      data.utm_source || "",
+      data.utm_medium || "",
+      data.utm_campaign || "",
+      data.utm_content || "",
+      data.utm_term || ""
+    ]);
     return ContentService.createTextOutput(JSON.stringify({"result": "success"}))
       .setMimeType(ContentService.MimeType.JSON);
   } catch (error) {
@@ -147,7 +158,7 @@ module.exports = async function handler(req, res) {
     if (req.method !== 'POST')
         return res.status(405).json({ error: 'Method Not Allowed' });
 
-    const { event_name, event_url, user_data } = req.body;
+    const { event_name, event_url, user_data, custom_data } = req.body;
     const PIXEL_ID     = '949207904646111';
     const ACCESS_TOKEN = 'EAANxZBmUZA9...';  // Long-lived access token
 
@@ -176,6 +187,7 @@ module.exports = async function handler(req, res) {
         event_source_url: event_url || req.headers.referer,
         action_source:    'web',
         user_data:        formattedUserData,
+        custom_data:      custom_data || undefined,
     }]};
 
     try {
