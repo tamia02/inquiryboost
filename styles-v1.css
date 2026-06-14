@@ -1981,5 +1981,104 @@ body {
         transform: translateX(calc(-100% / 3));
     }
 }
+/* ==========================================
+   OUR AIM SECTION
+   ========================================== */
+.company-aim-section {
+    background: #ffffff;
+    padding: 80px 0;
+    border-bottom: 1px solid #000000;
+}
+.company-aim-card {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 4rem;
+    padding: 4rem;
+    align-items: center;
+    background: #ffffff !important;
+}
+.company-aim-content {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.company-aim-content .quote-icon {
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+.company-aim-content .quote-icon i,
+.company-aim-content .quote-icon svg {
+    width: 48px;
+    height: 48px;
+}
+.aim-quote {
+    font-size: 1.35rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--text-main);
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+.aim-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 2rem;
+}
+.aim-details strong {
+    font-size: 1.05rem;
+    color: var(--text-main);
+    font-weight: 850;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.aim-details span {
+    font-size: 0.9rem;
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+.company-aim-visual {
+    position: relative;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    border: 1px solid #000000 !important;
+    overflow: hidden;
+}
+.aim-portrait {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+}
+.aim-badge {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0f172a;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 0.72rem;
+    padding: 6px 14px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
 
-
+@media (max-width: 768px) {
+    .company-aim-card {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 2rem 1.25rem !important;
+    }
+    .aim-quote {
+        font-size: 1.15rem;
+    }
+    .company-aim-visual {
+        order: -1;
+    }
+}
