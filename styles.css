@@ -1985,13 +1985,208 @@ body {
    OUR AIM SECTION
    ========================================== */
 .company-aim-section {
+    border-top-right-radius: 0 !important;
+}
+.wa-msg.received,
+.wa-chat-msg.received {
+    border-top-left-radius: 0 !important;
+}
+.wa-attachment,
+.wa-pdf-card,
+.wa-voice-message,
+.wa-date,
+.step-icon-wrap,
+.step-icon,
+.delivery-badge-icon,
+.stat-icon {
+    border-radius: 8px !important;
+}
+
+/* Remove page shadows and enforce clean black borders for sharp minimal editorial look */
+.glass-panel,
+.how-step,
+.card,
+.pricing-explanation-card,
+.stat-card,
+.testimonial-card,
+.voice-card,
+.works-best-for,
+.for-who,
+.not-for-who,
+.delivery-card,
+.cost-content,
+.faq-item,
+.modal-content,
+.compatibility-card,
+.next-steps-list {
+    box-shadow: none !important;
+    border: 1px solid #000000 !important;
+}
+
+/* CRO Button optimization - Solid borders and responsive hover states */
+.cta-button.primary {
+    border: 2px solid #20b958 !important;
+    background: linear-gradient(135deg, #25D366, #1ea34d) !important;
+}
+.cta-button.primary:hover {
+    background: #128C7E !important; /* Solid dark WhatsApp green */
+    border-color: #128C7E !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25) !important;
+    transform: translateY(-2px) !important;
+    transition: all 0.2s ease !important;
+}
+.cta-button.whatsapp {
+    border: 2px solid #0f172a !important;
+    background: #0f172a !important;
+}
+.cta-button.whatsapp:hover {
+    background: #1e293b !important;
+    border-color: #1e293b !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.15) !important;
+    transform: translateY(-2px) !important;
+    transition: all 0.2s ease !important;
+}
+.compatibility-card:hover,
+.how-step:hover,
+.delivery-card:hover,
+.stat-card:hover,
+.testimonial-card:hover,
+.faq-item:hover {
+    transform: none !important;
+    border-color: #000000 !important;
+    box-shadow: none !important;
+}
+
+/* Simplify body background and animations */
+body {
+    background-image: none !important; /* clean solid white background */
+}
+
+/* ==========================================
+   NAVIGATION BRAND LOGO & CLIENT MARQUEE
+   ========================================== */
+.nav-brand-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50% !important;
+    object-fit: cover;
+    border: 1px solid #000000;
+}
+
+.client-marquee-section {
+    padding: 50px 0 30px;
+    background: #ffffff;
+    border-bottom: 1px solid #000000;
+    overflow: hidden;
+}
+
+.marquee-title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.marquee-title-wrapper h3 {
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+}
+
+.marquee-title-wrapper .marquee-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #25D366;
+    border-radius: 50% !important;
+    display: inline-block;
+    box-shadow: 0 0 8px #25D366;
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0;
+}
+
+/* Linear gradients at the edges for a premium fade out/in look */
+.marquee-container::before,
+.marquee-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.marquee-container::before {
+    left: 0;
+    background: linear-gradient(to right, #ffffff, transparent);
+}
+
+.marquee-container::after {
+    right: 0;
+    background: linear-gradient(to left, #ffffff, transparent);
+}
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    gap: 24px;
+    animation: scrollMarquee 40s linear infinite !important;
+}
+
+.marquee-track:hover {
+    animation-play-state: paused !important;
+}
+
+.marquee-card {
+    width: 260px;
+    height: 360px;
+    flex-shrink: 0;
+    border: 1px solid #000000 !important;
+    border-radius: 0 !important;
+    overflow: hidden;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none !important;
+}
+
+.marquee-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@keyframes scrollMarquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% / 3));
+    }
+}
+/* ==========================================
+   OUR AIM SECTION
+   ========================================== */
+.company-aim-section {
     background: #ffffff;
     padding: 80px 0;
     border-bottom: 1px solid #000000;
 }
 .company-aim-card {
     display: grid;
-    grid-template-columns: 1.25fr 0.75fr;
+    grid-template-columns: 0.75fr 1.25fr;
     gap: 4rem;
     padding: 4rem;
     align-items: center;
@@ -2077,8 +2272,5 @@ body {
     }
     .aim-quote {
         font-size: 1.15rem;
-    }
-    .company-aim-visual {
-        order: -1;
     }
 }
