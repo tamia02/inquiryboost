@@ -1532,6 +1532,13 @@ section { padding: 80px 0; }
         align-items: center;
     }
     .hero h1 { font-size: 2.8rem; }
+    .hero-checklist {
+        align-items: center;
+        text-align: center;
+    }
+    .hero-checklist .checklist-line {
+        justify-content: center;
+    }
     .pain-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -1625,6 +1632,9 @@ section { padding: 80px 0; }
         text-align: center;
         padding: 1.5rem;
     }
+    .wa-voice-message {
+        margin: 10px auto;
+    }
     .compatibility-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
@@ -1635,6 +1645,27 @@ section { padding: 80px 0; }
         padding: 2.5rem 1.5rem;
     }
     .final-close h2 { font-size: 1.8rem; }
+    
+    /* Comparison Table mobile scroll override */
+    .comparison-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .comparison-table {
+        min-width: 600px;
+    }
+    
+    /* Mobilify paddings for all key container cards */
+    .card,
+    .works-best-for,
+    .for-who,
+    .not-for-who,
+    .pricing-explanation-card {
+        padding: 2rem 1.25rem !important;
+    }
+    .modal-content {
+        padding: 1.5rem !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1642,6 +1673,60 @@ section { padding: 80px 0; }
         grid-template-columns: 1fr;
     }
     .nav-logo { font-size: 1.1rem; }
+    
+    /* Phone Mockup responsive dimensions reduction */
+    .css-phone {
+        width: 280px !important;
+        height: 540px !important;
+        border-radius: 30px !important;
+    }
+    
+    /* Adjust text size & spacing inside responsive phone chat */
+    .wa-chat {
+        padding: 15px 10px !important;
+    }
+    .wa-msg {
+        font-size: 0.8rem !important;
+        padding: 8px 10px !important;
+    }
+    .wa-header {
+        padding: 30px 10px 10px !important;
+    }
+    .wa-avatar {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 0.85rem !important;
+    }
+    .wa-info strong {
+        font-size: 0.85rem !important;
+    }
+    .wa-info span {
+        font-size: 0.7rem !important;
+    }
+    .wa-pdf-card {
+        padding: 6px 10px !important;
+        gap: 8px !important;
+    }
+    .pdf-name {
+        font-size: 0.75rem !important;
+    }
+    .pdf-meta {
+        font-size: 0.65rem !important;
+    }
+    
+    /* Prevent floating reply time badge from breaking mobile edges */
+    .reply-time-badge {
+        right: 5px !important;
+        top: 10px !important;
+        padding: 6px 10px !important;
+        min-width: 75px !important;
+    }
+    .reply-time-badge .badge-value {
+        font-size: 1.3rem !important;
+    }
+    .reply-time-badge .badge-label {
+        font-size: 0.6rem !important;
+    }
 }
 
 /* ==========================================
