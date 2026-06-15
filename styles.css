@@ -2250,12 +2250,13 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: none !important;
+    padding: 12px;
 }
 
 .marquee-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
 }
 
