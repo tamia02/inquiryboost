@@ -1,5 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
     
+    // --- FOMO COUNTER LOGIC ---
+    const fomoSlots = document.getElementById('fomo-slots');
+    if (fomoSlots) {
+        let currentSlots = localStorage.getItem('fomo_slots_count');
+        if (currentSlots === null) {
+            currentSlots = 14;
+        } else {
+            currentSlots = parseInt(currentSlots, 10);
+            if (isNaN(currentSlots) || currentSlots <= 3) {
+                currentSlots = 14;
+            } else {
+                currentSlots = currentSlots - 1;
+            }
+        }
+        localStorage.setItem('fomo_slots_count', currentSlots);
+        fomoSlots.textContent = currentSlots;
+    }
+
     // --- SCROLL ANIMATIONS ---
     const scrollElements = document.querySelectorAll('.scroll-anim');
 
@@ -74,10 +92,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const checkoutForm = document.getElementById('checkoutForm');
     
     // Open modal on CTA click
+    const openModal = () => {
+        if (modal) {
+            modal.classList.add('active');
+            if (window.history.state !== 'modal-open') {
+                window.history.pushState('modal-open', '', '#checkout');
+            }
+        }
+    };
+
+    const closeModal = () => {
+        if (modal) {
+            modal.classList.remove('active');
+            if (window.location.hash === '#checkout') {
+                window.history.back();
+            }
+        }
+    };
+
     document.querySelectorAll('a[href="#buy"], .nav-cta').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            modal.classList.add('active');
+            openModal();
 
             // CAPI: Track InitiateCheckout when modal opens
             fetch('/api/capi', {
@@ -93,19 +129,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close modal
     if(closeBtn) {
-        closeBtn.addEventListener('click', () => {
-            modal.classList.remove('active');
-        });
+        closeBtn.addEventListener('click', closeModal);
     }
 
     // Close modal if clicked outside
     if(modal) {
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
-                modal.classList.remove('active');
+                closeModal();
             }
         });
     }
+
+    // Close modal when user clicks mobile browser/system back button
+    window.addEventListener('popstate', (e) => {
+        if (modal && modal.classList.contains('active')) {
+            modal.classList.remove('active');
+        }
+    });
 
     // Form Submission & Razorpay Integration
     if(checkoutForm) {
@@ -168,8 +209,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 "key": "rzp_live_SqKJKhltZYuB9N", // Enter the Key ID generated from the Dashboard
                 "amount": "39900", // Amount is in currency subunits (paise). ₹399 = 39900.
                 "currency": "INR",
-                "name": "AutoAdmissions",
-                "description": "AutoAdmissions Template",
+                "name": "WFE System",
+                "description": "WFE System Template",
                 "handler": function (response){
                     // Payment successful
                     console.log("Payment ID: ", response.razorpay_payment_id);
