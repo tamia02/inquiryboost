@@ -209,8 +209,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 "key": "rzp_live_SqKJKhltZYuB9N", // Enter the Key ID generated from the Dashboard
                 "amount": "39900", // Amount is in currency subunits (paise). ₹399 = 39900.
                 "currency": "INR",
-                "name": "WFE System",
-                "description": "WFE System Template",
+                "name": "WFA AI System",
+                "description": "WFA AI System Template",
                 "handler": function (response){
                     // Payment successful
                     console.log("Payment ID: ", response.razorpay_payment_id);
