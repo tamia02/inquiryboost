@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const utm_term = document.getElementById('utm_term').value;
 
             // 1. Send Lead Data to Google Sheets
-            const googleWebAppUrl = "https://script.google.com/macros/s/AKfycbxfhT2nTNWlHZogT0-WuVglYO1STBTWYotLf92xBir-tiD4RBk0G8q40CbXVxJ3c1h37A/exec";
+            const googleWebAppUrl = "https://script.google.com/macros/s/AKfycbyK7zeMVBY1XMt6rc3i7ZIuNQFvt3P0fb4nQKB8ig1WjW0fBTCVGh42T7-Dt3T0MO0lmw/exec";
             if (googleWebAppUrl !== "YOUR_GOOGLE_SCRIPT_URL_HERE") {
                 fetch(googleWebAppUrl, {
                     method: 'POST',
