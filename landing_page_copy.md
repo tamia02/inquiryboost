@@ -35,14 +35,14 @@ Late reply = Lost admission = Lost money.
 ---
 
 ## 3. SOLUTION SHIFT
-**Title:** Imagine Waking Up To Hot Leads, Not Dead Messages
+**Title:** Imagine Waking Up To Managed Inquiries, Not Dead Messages
 
 **Before:** Waking up to "seen" messages. Parents ignoring you. Staff typing the same PDF 100 times.
 **After:** Parents get an instant, polite reply. 24/7. Even on Sundays.
 
 No manual typing.
 No depending on lazy staff.
-Your WhatsApp becomes an unstoppable 24/7 admission machine.
+Your WhatsApp becomes an unstoppable 24/7 inquiry manager.
 
 ---
 
@@ -66,7 +66,7 @@ Your WhatsApp becomes an unstoppable 24/7 admission machine.
 ### Before (The Nightmare)
 1. "Fee kya hai?" ignored for 6 hours.
 2. Sending the same PDF 50 times a day manually.
-3. Forgetting to follow up with hot leads.
+3. Forgetting to follow up with interested parents.
 4. Admin staff is stressed and making mistakes.
 5. Parents think your institute is slow and unprofessional.
 6. Faster competitors are stealing your students.
@@ -78,7 +78,7 @@ Your WhatsApp becomes an unstoppable 24/7 admission machine.
 3. Bot follows up like a relentless sales pro.
 4. Your staff only talks to serious, ready-to-pay parents.
 5. You build a super-premium, fast brand image.
-6. You steal leads from your slow competitors.
+6. You capture inquiries faster than your slow competitors.
 7. You relax on Sunday. The bot handles admissions.
 
 ---
@@ -103,7 +103,7 @@ Your WhatsApp becomes an unstoppable 24/7 admission machine.
 Coaching centers using this system see:
 * **60% jump** in reply rates.
 * **40% more walk-ins** to the center.
-* **Zero "ghosted" leads.**
+* **Zero "ghosted" inquiries.**
 
 Simple math. Fast replies = More trust = More admissions.
 
@@ -120,7 +120,7 @@ Simple math. Fast replies = More trust = More admissions.
 
 ## 9. WHO IS THIS NOT FOR
 **Title:** Please DO NOT Buy If...
-* You don't care about losing ₹20,000 per lead.
+* You don't care about losing ₹20,000 per inquiry.
 * You only get 2-3 inquiries a month (you don't need automation).
 * You want magic but refuse to spend 1 hour to set it up.
 
