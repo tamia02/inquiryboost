@@ -5,7 +5,7 @@ WhatsApp Automation Template — Landing Page Project
 
 | Stack | Backend | Payments |
 |---|---|---|
-| HTML · CSS · JS | Vercel Serverless | Razorpay — ₹399 |
+| HTML · CSS · JS | Vercel Serverless | Razorpay — ₹999 |
 
 ---
 
@@ -72,7 +72,7 @@ The checkout flow is a linear sequence that captures lead data before opening th
 | Step 1 | Step 2 | Step 3 | Step 4 | Step 5 |
 |---|---|---|---|---|
 | **Click CTA** | **Modal Opens** | **Lead Captured** | **Razorpay** | **Success** |
-| User clicks `GET AUTOADMISSIONS FREE` or nav button | Checkout modal with Name, Email, Phone, Designation | Google Sheets + Meta CAPI 'Lead' event triggered | Secure payment modal — ₹399 INR | Redirect to `thankyou.html` |
+| User clicks `GET AUTOADMISSIONS FREE` or nav button | Checkout modal with Name, Email, Phone, Designation | Google Sheets + Meta CAPI 'Lead' event triggered | Secure payment modal — ₹999 INR | Redirect to `thankyou.html` |
 
 #### Razorpay Options Configuration
 Orchestrated inside `script.js`:
@@ -80,7 +80,7 @@ Orchestrated inside `script.js`:
 ```javascript
 var options = {
     "key":         "rzp_live_TDGz1xdyISTd4p",
-    "amount":      "39900",  // paise — ₹399 = 39900
+    "amount":      "99900",  // paise — ₹999 = 99900
     "currency":    "INR",
     "name":        "AutoAdmissions",
     "description": "AutoAdmissions Template",
@@ -141,7 +141,7 @@ Tracking uses a Hybrid Client + Server (CAPI) approach to bypass ad-blockers and
 
 #### Client-Side Pixels
 * **Meta Pixel — PageView**: Fired automatically on window load.
-* **Meta Pixel — Purchase**: Fired on `thankyou.html` with value `399.00 INR`.
+* **Meta Pixel — Purchase**: Fired on `thankyou.html` with value `999.00 INR`.
 * **Microsoft Clarity**: Script tags load recording engine `wotnjoj5v0` for behaviour tracking.
 
 #### Serverless Meta Conversions API (CAPI)
