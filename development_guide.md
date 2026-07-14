@@ -79,7 +79,7 @@ Orchestrated inside `script.js`:
 
 ```javascript
 var options = {
-    "key":         "rzp_live_SqKJKhltZYuB9N",
+    "key":         "rzp_live_TDGz1xdyISTd4p",
     "amount":      "39900",  // paise — ₹399 = 39900
     "currency":    "INR",
     "name":        "AutoAdmissions",
