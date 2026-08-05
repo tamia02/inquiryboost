@@ -2366,3 +2366,9 @@ body {
         font-size: 1.15rem;
     }
 }
+
+/* Star Rating Styles */
+.rating-stars svg, .delivery-file-info svg[data-lucide="star"] {
+    fill: #FFD700;
+    color: #FFD700;
+}
