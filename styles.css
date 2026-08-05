@@ -2369,7 +2369,8 @@ body {
 
 /* Star Rating Styles */
 .rating-stars svg, .delivery-file-info svg[data-lucide="star"],
-.rating-stars svg path, .delivery-file-info svg[data-lucide="star"] path {
+.rating-stars svg path, .delivery-file-info svg[data-lucide="star"] path,
+.rating-stars svg polygon, .delivery-file-info svg[data-lucide="star"] polygon {
     fill: #FFD700 !important;
     color: #FFD700 !important;
     stroke: #FFD700 !important;
