@@ -2368,7 +2368,9 @@ body {
 }
 
 /* Star Rating Styles */
-.rating-stars svg, .delivery-file-info svg[data-lucide="star"] {
-    fill: #FFD700;
-    color: #FFD700;
+.rating-stars svg, .delivery-file-info svg[data-lucide="star"],
+.rating-stars svg path, .delivery-file-info svg[data-lucide="star"] path {
+    fill: #FFD700 !important;
+    color: #FFD700 !important;
+    stroke: #FFD700 !important;
 }
